@@ -69,7 +69,7 @@
           </div>
           <button
             class="copy-btn"
-            onclick="copyToClipboard('student-id')"
+            data-copy="student-id"
             title="Copy Student ID"
           >
             <i class="fas fa-copy"></i>
@@ -84,7 +84,7 @@
           </div>
           <button
             class="copy-btn"
-            onclick="copyToClipboard('line-number')"
+            data-copy="line-number"
             title="Copy LINE Number"
           >
             <i class="fas fa-copy"></i>
@@ -95,26 +95,10 @@
 
     <footer>
       <p>Made by XP © 2025</p>
-      <audio id="lofi-player" loop autoplay>
-        <source src="music/lofi-loop.mp3" type="audio/mpeg" />
-      </audio>
     </footer>
 
     <canvas id="particles"></canvas>
     <script src="js/main.js"></script>
 
-    <script>
-      function copyToClipboard(elementId) {
-        const text = document.getElementById(elementId).innerText;
-        navigator.clipboard
-          .writeText(text)
-          .then(() => {
-            alert(text + " copied to clipboard!");
-          })
-          .catch((err) => {
-            console.error("Failed to copy: ", err);
-          });
-      }
-    </script>
   </body>
 </html>

@@ -3,7 +3,10 @@ const savedTheme = localStorage.getItem('portfolio-theme');
 if (savedTheme === 'dark') document.body.classList.add('dark-mode');
 
 function setToggleLabel() {
-  if (toggle) toggle.setAttribute('aria-label', document.body.classList.contains('dark-mode') ? 'Use light theme' : 'Use dark theme');
+  if (!toggle) return;
+  const dark = document.body.classList.contains('dark-mode');
+  toggle.setAttribute('aria-label', dark ? 'Use light theme' : 'Use dark theme');
+  toggle.textContent = dark ? '☼' : '◐';
 }
 setToggleLabel();
 toggle?.addEventListener('click', () => {

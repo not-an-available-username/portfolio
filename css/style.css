@@ -25,7 +25,7 @@ footer { margin-top:auto; padding:23px clamp(20px,5vw,72px); border-top:1px soli
 #about { min-height:calc(100vh - 78px); display:grid; align-items:center; margin-top:0; margin-bottom:0; }
 .about-container { display:grid; grid-template-columns:minmax(230px,.72fr) minmax(0,1.4fr); gap:clamp(32px,7vw,105px); align-items:center; }
 .about-image { position:relative; }.about-image::before { content:"01 / ABOUT"; position:absolute; top:-26px; left:0; font:500 11px DM Mono,monospace; color:var(--red); letter-spacing:.1em; }.about-image::after { content:""; position:absolute; inset:18px -18px -18px 18px; border:1px solid var(--red); z-index:-1; }
-#about img,.about-image img { display:block; width:100%; max-width:330px; aspect-ratio:4/5; object-fit:cover; border-radius:0; border:0; transition:filter .35s,transform .35s; }.about-image:hover img { filter:grayscale(0); transform:translate(-6px,-6px); }
+#about img,.about-image img { display:block; width:100%; max-width:330px; aspect-ratio:4/5; object-fit:cover; border-radius:0; border:0; transition:filter .35s,transform .35s; }.about-image:hover img { transform:translate(-6px,-6px); }
 .about-text { max-width:700px; }.about-text::before { content:"NGUYEN XUAN PHUONG"; display:block; color:var(--red); font:500 12px DM Mono,monospace; letter-spacing:.12em; margin-bottom:14px; }.about-text p { font-size:clamp(18px,2vw,25px); line-height:1.55; letter-spacing:-.035em; }
 .fun-facts { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; margin-top:28px; background:var(--line); border:1px solid var(--line); }.fact { background:var(--card); padding:16px; font-size:12px; line-height:1.5; font-weight:600; transition:background .2s,color .2s; }.fact:hover { background:var(--ink); color:var(--paper); }
 
